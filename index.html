@@ -1,36 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>TradeFlow AI Demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: #f4f6fb;
+      color: #0a0a0a;
     }
+
+    /* Header / Banner */
     header {
-      background: #050a30;
+      background: linear-gradient(135deg, #050a30, #3533cd);
       color: #ffffff;
-      padding: 16px;
+      padding: 28px 20px;
       text-align: center;
     }
-    iframe {
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    /* App Container */
+    .app-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .app-frame {
       width: 100%;
-      height: calc(100vh - 70px);
-      border: none;
+      max-width: 1100px;
+      min-height: 75vh;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      padding: 20px;
+    }
+
+    /* Ensures Aminos fills the frame */
+    .app-frame > div,
+    .app-frame iframe {
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 70vh;
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>TradeFlow AI Demo</h1>
-  <p>Test contractor workflows before upgrading</p>
-</header>
+  <!-- Banner -->
+  <header>
+    <h1>TradeFlow AI Demo</h1>
+    <p>Test real contractor workflows before upgrading</p>
+  </header>
 
-<script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="57691"></script>
+  <!-- App Container -->
+  <div class="app-wrapper">
+    <div class="app-frame">
+
+      <!-- Aminos Demo Bot (SCRIPT VERSION — EXACT AS REQUESTED) -->
+      <script 
+        src="https://app.aminos.ai/js/chat_plugin.js" 
+        data-bot-id="57691">
+      </script>
+
+    </div>
+  </div>
 
 </body>
 </html>
