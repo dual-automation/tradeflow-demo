@@ -4,39 +4,62 @@
   <meta charset="UTF-8" />
   <title>TradeFlow AI — Live Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
-    body {
+    html, body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f6fa;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6fb;
     }
+
     header {
-      padding: 16px;
-      text-align: center;
       background: #050a30;
       color: #ffffff;
-      font-size: 20px;
-      font-weight: bold;
+      padding: 16px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
     }
-    .sub {
-      font-size: 14px;
-      opacity: 0.85;
+
+    header span {
+      display: block;
+      font-size: 13px;
+      font-weight: 400;
+      opacity: 0.9;
+      margin-top: 4px;
     }
+
+    .iframe-wrap {
+      height: calc(100vh - 78px);
+      width: 100%;
+    }
+
     iframe {
       width: 100%;
-      height: calc(100vh - 80px);
+      height: 100%;
       border: none;
+      display: block;
+      background: #ffffff;
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  TradeFlow AI — Demo
-  <div class="sub">Test real contractor workflows before upgrading</div>
-</header>
+  <header>
+    TradeFlow AI — Demo
+    <span>Test real contractor workflows before upgrading</span>
+  </header>
 
-<!-- Amino DEMO bot embed -->
-<script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="57691"></script>
+  <div class="iframe-wrap">
+    <iframe
+      src=<script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="57691"></script>
+      allow="microphone; clipboard-write"
+      loading="lazy">
+    </iframe>
+  </div>
+
 </body>
 </html>
