@@ -40,14 +40,12 @@
       border-radius: 12px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
       padding: 20px;
-      min-height: 600px;
+      min-height: 650px;
     }
 
-    .note {
-      text-align: center;
-      color: #555;
-      margin-bottom: 14px;
-      font-size: 14px;
+    #amino-chat {
+      width: 100%;
+      height: 600px;
     }
   </style>
 </head>
@@ -60,14 +58,17 @@
   </header>
 
   <main>
-    <div class="note">
-      Demo mode • Limited responses • Upgrade to unlock full workflows
-    </div>
-
     <div class="demo-box">
-      <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="57691"></script>
+      <div id="amino-chat"></div>
     </div>
   </main>
+
+  <!-- Amino Chat Script -->
+  <script
+    src="https://app.aminos.ai/js/chat_plugin.js"
+    data-bot-id="57691"
+    data-container-id="amino-chat">
+  </script>
 
 </body>
 </html>
