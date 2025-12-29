@@ -7,22 +7,43 @@
   <style>
     body { margin:0; font-family: Arial, sans-serif; background:#f4f6f8; }
     header {
-      background: linear-gradient(135deg, #0f172a, #1e3a8a);
-      color: #fff;
-      padding: 24px;
-      text-align: center;
+      background: linear-gradient(135deg, #050a30, #3533cd);
+      color:#fff;
+      padding:26px;
+      text-align:center;
     }
-    main { padding: 20px; }
+    .menu-strip {
+      background:#0b102a;
+      color:#dbeafe;
+      font-size:14px;
+      padding:10px;
+      text-align:center;
+    }
+    main { padding:16px; }
+    #chat_form {
+      width:100%;
+      min-height:90vh;
+      background:#fff;
+      border-radius:10px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>TradeFlow AI — Demo</h1>
-    <p>Test real contractor workflows before upgrading</p>
-  </header>
 
-  <main>
-    <script src="https://app.aminos.ai/js/chat_form_plugin.js" data-bot-id="57691"></script>
-  </main>
+<header>
+  <h1>TradeFlow AI — Interactive Demo</h1>
+  <p>Test real contractor workflows before upgrading</p>
+</header>
+
+<div class="menu-strip">
+  Tip: Use the menu at any time to explore estimates, proposals, follow-ups, and workflows
+</div>
+
+<main>
+  <div id="chat_form"></div>
+  <script src="https://app.aminos.ai/js/chat_form_plugin.js" data-bot-id="57691"></script>
+</main>
+
 </body>
 </html>
