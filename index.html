@@ -1,49 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>TradeFlow AI — Demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#f4f6f8; }
-    header {
-      background: linear-gradient(135deg, #050a30, #3533cd);
-      color:#fff;
-      padding:26px;
-      text-align:center;
-    }
-    .menu-strip {
-      background:#0b102a;
-      color:#dbeafe;
-      font-size:14px;
-      padding:10px;
-      text-align:center;
-    }
-    main { padding:16px; }
-    #chat_form {
-      width:100%;
-      min-height:90vh;
-      background:#fff;
-      border-radius:10px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    }
-  </style>
-</head>
-<body>
+<meta charset="UTF-8" />
+<title>TradeFlow AI — Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f4f6f8;}
+header{
+  background:linear-gradient(135deg,#050a30,#3533cd);
+  color:#fff;padding:24px;text-align:center;
+}
+header h1{margin:0;font-size:26px;}
+header p{margin:8px 0 0;opacity:.9;}
+
+.menu-strip{
+  background:#0b102a;color:#dbeafe;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:10px 14px;font-size:14px;
+}
+.menu-strip a{
+  background:#fff;color:#050a30;text-decoration:none;
+  padding:8px 12px;border-radius:10px;font-weight:700;margin-left:8px;
+}
+
+main{padding:12px;}
+#chat_form{
+  width:100%;
+  min-height:calc(100vh - 210px);
+  background:#fff;border-radius:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+@media(max-width:520px){
+  #chat_form{min-height:calc(100vh - 230px);}
+}
+</style>
+</head>
+
+<body>
 <header>
   <h1>TradeFlow AI — Interactive Demo</h1>
   <p>Test real contractor workflows before upgrading</p>
 </header>
 
 <div class="menu-strip">
-  Tip: Use the menu at any time to explore estimates, proposals, follow-ups, and workflows
+  <div><b>Tip:</b> Type <b>MENU</b> anytime to see options</div>
+  <div>
+    <a href="https://tradeflowai.tech" target="_blank">Back to Site</a>
+    <a href="https://tradeflowai.tech#pricing" target="_blank">Upgrade</a>
+  </div>
 </div>
 
 <main>
   <div id="chat_form"></div>
   <script src="https://app.aminos.ai/js/chat_form_plugin.js" data-bot-id="57691"></script>
 </main>
-
 </body>
 </html>
